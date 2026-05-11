@@ -7,6 +7,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import HomeScreen from "./pages/HomeScreen";
 import DetailScreen from "./pages/DetailScreen";
 import HistoryScreen from "./pages/HistoryScreen";
+import AboutScreen from "./pages/AboutScreen";
 import { AuthProvider } from "./context/AuthContext";
 
 const Tab = createBottomTabNavigator();
@@ -48,6 +49,14 @@ export default function App() {
             options={{
               tabBarLabel: "Riwayat",
               tabBarIcon: ({ color }) => <MaterialIcons name="history" size={24} color={color} />
+            }}
+          />
+          <Tab.Screen
+            name="AboutTab"
+            component={AboutScreen}
+            options={{
+              tabBarLabel: "Tentang",
+              tabBarIcon: ({ color }) => <MaterialIcons name="info" size={24} color={color} />
             }}
           />
         </Tab.Navigator>
