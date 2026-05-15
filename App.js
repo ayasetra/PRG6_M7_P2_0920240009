@@ -8,6 +8,7 @@ import HomeScreen from "./pages/HomeScreen";
 import DetailScreen from "./pages/DetailScreen";
 import HistoryScreen from "./pages/HistoryScreen";
 import AboutScreen from "./pages/AboutScreen";
+import LocationScreen from "./pages/LocationScreen";
 import { AuthProvider } from "./context/AuthContext";
 
 const Tab = createBottomTabNavigator();
@@ -59,6 +60,14 @@ export default function App() {
               tabBarIcon: ({ color }) => <MaterialIcons name="info" size={24} color={color} />
             }}
           />
+         <Tab.Screen
+          name="Location"
+          component={LocationScreen}
+          options={{
+            tabBarLabel: "Lokasi",
+            tabBarIcon: ({ color }) => <MaterialIcons name="location-on" size={24} color={color} />,
+          }}
+        />
         </Tab.Navigator>
       </NavigationContainer>
     </AuthProvider>
